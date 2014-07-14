@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<p>Click @Html.ActionLink("here", "Index", "Package") to view your packages.</p>
+
+<form action="@Url.Action("Upload")" enctype="multipart/form-data" method="post">
+<fieldset>
+    <legend>Upload Package (*.nupkg)</legend>        
+    <div class="editor-field">
+        <input type="file" id="upload" name="upload" />
+        @Html.ValidationMessage("upload")
+    </div>
+    <div class="buttons">
+        <input type="submit" value="Upload" />
+    </div>
+</fieldset>
+</form>

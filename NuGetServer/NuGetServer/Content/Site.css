@@ -1,0 +1,135 @@
+﻿body
+{
+    font-size: 75%;
+    font-family: Verdana, Tahoma, Arial, "Helvetica Neue", Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+
+fieldset 
+{
+    border:1px solid #ddd;
+    padding:0 1.4em 1.4em 1.4em;
+    margin:0 0 1.5em 0;
+}
+
+legend 
+{
+    font-size:1.2em;
+    font-weight: bold;
+}
+
+textarea 
+{
+    min-height: 75px;
+}
+
+.editor-label 
+{
+    margin: 1em 0 0 0;
+}
+
+.editor-field 
+{
+    margin:0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+.input-validation-error
+{
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors
+{
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+.statusMessage  
+{
+    display: block;
+    border: solid 1px black;
+    padding: 10px; 
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.success 
+{
+    background-color: #92CCA6;   
+}
+
+.package {
+   position:relative;
+   width:95%;
+   padding:1em 1.5em;
+   margin:2em auto;
+   background-color:#eee;
+   overflow:hidden;
+}
+
+.package:before {
+   content:"";
+   position:absolute;
+   top:0;
+   right:0;
+   border-width:0 16px 16px 0;
+   border-style:solid;
+   border-color:#fff #fff #658E15 #658E15;
+   background:#c0c0c0;
+   -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+   -moz-box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+   box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+   display:block; width:0; /* Firefox 3.0 damage limitation */
+}
+
+.package.rounded {
+   -webkit-border-radius:5px 0 5px 5px;
+   -moz-border-radius:5px 0 5px 5px;
+   border-radius:5px 0 5px 5px;
+}
+
+.package.rounded:before {
+   border-width:8px;
+   border-color:#fff #fff transparent transparent;
+   -webkit-border-bottom-left-radius:5px;
+   -moz-border-radius:0 0 0 5px;
+   border-radius:0 0 0 5px;
+}
+
+.title  
+{
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.package ul { list-style: none; margin: 0px auto; }
+.package ul li label { display:block; width: 100px; float: left; }
+.package-icon { float: left; padding: 10px 20px 10px 0px; }
+.package-delete { float: right; }
+
+#header { clear:both; display:block; height: 70px; border-bottom: solid 2px #eee; }
+#header img { float: left; }
+#header h2 { float: left; }

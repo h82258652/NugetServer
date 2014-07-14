@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("http://code.jquery.com/jquery.js")" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="header">
+        <a href="/"><img src="/Content/Images/nuget.png" /></a>
+        <h2>Nuget Server</h2>
+        <a href="/nuget/Packages"><img src="/Content/Images/atom_feed.png" style="float:right" /></a>
+    </div>
+
+    @if (ViewBag.StatusMessage != null)
+    {
+        <div class='statusMessage @(ViewBag.StatusMessage.Success ? "success" : "")'>
+            @ViewBag.StatusMessage.Message
+        </div>
+    }
+
+    @RenderBody()
+</body>
+<footer>You are running NuGet.Server v@(typeof(NuGet.Server.DataServices.Package).Assembly.GetName().Version)</footer>
+</html>
